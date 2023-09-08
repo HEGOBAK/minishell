@@ -6,11 +6,25 @@
 /*   By: thong-bi <thong-bi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/07 15:26:32 by thong-bi          #+#    #+#             */
-/*   Updated: 2023/09/07 15:45:54 by thong-bi         ###   ########.fr       */
+/*   Updated: 2023/09/08 16:41:11 by thong-bi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
+
+char	*get_ev(char *name, t_list *lst)
+{
+	t_env	*ev;
+
+	while (lst)
+	{
+		ev = (t_env *)lst->content;
+		if (ft_strcmp(ev->name, name) == 0)
+			return (ev->value);
+		lst = lst->next;
+	}
+	return (NULL);
+}
 
 void	store_ev(t_list **lst, char *name, char *value, int end)
 {
