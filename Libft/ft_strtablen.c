@@ -1,39 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   free.c                                             :+:      :+:    :+:   */
+/*   ft_strtablen.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thong-bi <thong-bi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/07 16:05:21 by thong-bi          #+#    #+#             */
-/*   Updated: 2023/09/07 16:08:15 by thong-bi         ###   ########.fr       */
+/*   Created: 2023/09/11 14:25:37 by thong-bi          #+#    #+#             */
+/*   Updated: 2023/09/11 14:25:53 by thong-bi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "minishell.h"
+#include "libft.h"
 
-void	ft_free(char **tab)
+int	ft_strtablen(char **tab)
 {
-	char	**tmp;
+	int	cnt;
 
-	if (tab == NULL)
-		return ;
-	tmp = tab;
-	while (*tab)
-	{
-		free(*tab);
-		tab++;
-	}
-	free(tmp);
-}
-
-void	free_elem(t_list *elem)
-{
-	t_env	*env;
-
-	env = (t_env *)elem->content;
-	free(env->name);
-	free(env->value);
-	free(env);
-	free(elem);
+	cnt = -1;
+	while (tab[++cnt])
+		;
+	return (cnt);
 }

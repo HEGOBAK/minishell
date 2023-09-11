@@ -6,7 +6,7 @@
 /*   By: thong-bi <thong-bi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/07 15:10:46 by thong-bi          #+#    #+#             */
-/*   Updated: 2023/09/08 17:30:02 by thong-bi         ###   ########.fr       */
+/*   Updated: 2023/09/11 14:47:29 by thong-bi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ typedef struct s_built
 }	t_built;
 
 void	ft_free(char **tab);
+void	free_elem(t_list *elem);
 void	init_ev(t_list **lst, char **ev);
 void	ft_echo(char **args, t_list **ev);
 char	*get_ev(char *name, t_list *lst);

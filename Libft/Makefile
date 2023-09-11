@@ -6,7 +6,7 @@
 #    By: thong-bi <thong-bi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/06 15:20:58 by jchu              #+#    #+#              #
-#    Updated: 2023/09/08 15:36:13 by thong-bi         ###   ########.fr        #
+#    Updated: 2023/09/11 14:28:11 by thong-bi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,6 +41,7 @@ SRCS		= ft_memset.c \
 			  ft_substr.c \
 			  ft_strjoin.c \
 			  ft_strtrim.c \
+			  ft_strtablen \
 			  ft_split.c \
 			  ft_itoa.c \
 			  ft_strmapi.c \
